@@ -1,0 +1,101 @@
+Deal_ID,Company,Industry,Region,AE_Owner,Product,Stage,ARR_USD,Contract_Length_Months,Probability_Pct,Expected_Close_Date,Lead_Source,Days_In_Stage,Last_Activity_Date,Notes
+DEAL-2025-0001,SAP,Retail,EMEA,Marcus Williams,Astra Enterprise Suite,Proposal Sent,25000,36,50,2025-01-28,Event,18,2025-01-02,Strong champion
+DEAL-2025-0002,Deloitte,Energy,EMEA,Emma Schmidt,Astra Analytics,Prospecting,95000,36,10,2025-02-28,Partner Referral,39,2025-01-26,Strong champion
+DEAL-2025-0003,Databricks,Technology,EMEA,James O'Brien,Astra Workflow,Negotiation,72000,36,65,2025-01-12,Event,28,2025-01-04,Decision by EoQ
+DEAL-2025-0004,Toast,Energy,NAMER,Emma Schmidt,Astra Core,Contract Review,650000,24,80,2025-03-19,Content Download,3,2025-01-21,Decision by EoQ
+DEAL-2025-0005,Brex,Retail,APAC,Marcus Williams,Astra Analytics,Proposal Sent,1200000,12,50,2025-01-22,Partner Referral,3,2025-01-15,Decision by EoQ
+DEAL-2025-0006,Salesforce,Healthcare,EMEA,James O'Brien,Astra Analytics,Prospecting,180000,12,10,2025-02-22,Partner Referral,43,2025-01-30,On track
+DEAL-2025-0007,KPMG,Media,LATAM,Yuki Tanaka,Astra Core,Discovery,180000,12,20,2025-01-28,Webinar,15,2025-01-11,POC in progress
+DEAL-2025-0008,Infosys,Technology,EMEA,James O'Brien,Astra Enterprise Suite,Proposal Sent,240000,36,50,2025-03-18,Webinar,30,2025-01-19,Multi-year deal possible
+DEAL-2025-0009,Cognizant,Energy,LATAM,Marcus Williams,Astra Core,Closed Won,240000,24,100,2025-01-14,Webinar,15,2025-01-06,Multi-year deal possible
+DEAL-2025-0010,Toast,Energy,APAC,Sarah Chen,Astra Core,Proposal Sent,240000,24,50,2025-03-27,Content Download,39,2025-01-09,Decision by EoQ
+DEAL-2025-0011,Accenture,Technology,EMEA,Marcus Williams,Astra Workflow,Prospecting,240000,12,10,2025-03-26,Customer Referral,30,2025-01-07,Evaluating competitors
+DEAL-2025-0012,Accenture,Real Estate,APAC,David Kim,Astra Core,Discovery,72000,36,20,2025-01-21,Content Download,34,2025-01-26,Legal review ongoing
+DEAL-2025-0013,McKinsey,Government,NAMER,Priya Patel,Astra Analytics,Discovery,95000,36,20,2025-03-25,Customer Referral,6,2025-01-06,Legal review ongoing
+DEAL-2025-0014,Zoho,Retail,APAC,Emma Schmidt,Astra Workflow,Demo Completed,650000,24,35,2025-02-26,Event,14,2025-01-04,POC in progress
+DEAL-2025-0015,Monday.com,Retail,EMEA,Sarah Chen,Astra Core,Discovery,180000,12,20,2025-03-11,Outbound SDR,38,2025-01-03,Strong champion
+DEAL-2025-0016,Salesforce,Government,EMEA,Priya Patel,Astra Enterprise Suite,Contract Review,48000,36,80,2025-03-25,Outbound SDR,16,2025-01-26,At risk - champion left
+DEAL-2025-0017,Brex,Education,APAC,Emma Schmidt,Astra Insights,Contract Review,95000,12,80,2025-02-11,Webinar,7,2025-01-21,No budget confirmed
+DEAL-2025-0018,SAP,Retail,EMEA,David Kim,Astra Analytics,Prospecting,1200000,24,10,2025-02-15,Partner Referral,7,2025-01-15,POC in progress
+DEAL-2025-0019,BCG,Financial Services,NAMER,Marcus Williams,Astra Analytics,Contract Review,48000,24,80,2025-01-23,Event,36,2025-01-16,POC in progress
+DEAL-2025-0020,Accenture,Education,APAC,David Kim,Astra Workflow,Contract Review,25000,12,80,2025-02-27,Webinar,25,2025-01-23,At risk - champion left
+DEAL-2025-0021,Notion,Energy,NAMER,Carlos Mendez,Astra Core,Prospecting,125000,12,10,2025-01-28,Event,4,2025-01-17,On track
+DEAL-2025-0022,PwC,Real Estate,NAMER,James O'Brien,Astra Insights,Prospecting,480000,12,10,2025-01-28,Outbound SDR,12,2025-01-19,Strong champion
+DEAL-2025-0023,Asana,Energy,APAC,Yuki Tanaka,Astra Analytics,Proposal Sent,240000,36,50,2025-03-20,Outbound SDR,38,2025-01-09,Multi-year deal possible
+DEAL-2025-0024,Snowflake,Healthcare,NAMER,David Kim,Astra Enterprise Suite,Prospecting,820000,24,10,2025-03-13,Inbound,30,2025-01-18,POC in progress
+DEAL-2025-0025,SAP,Media,APAC,Priya Patel,Astra Insights,Demo Completed,72000,24,35,2025-03-19,Customer Referral,5,2025-01-26,On track
+DEAL-2025-0026,BCG,Manufacturing,APAC,Marcus Williams,Astra Core,Prospecting,480000,24,10,2025-03-27,Outbound SDR,43,2025-01-09,Legal review ongoing
+DEAL-2025-0027,Rippling,Technology,LATAM,Yuki Tanaka,Astra Core,Proposal Sent,1200000,24,50,2025-01-23,Content Download,14,2025-01-09,Strong champion
+DEAL-2025-0028,TCS,Government,LATAM,Sarah Chen,Astra Core,Prospecting,72000,36,10,2025-01-14,Customer Referral,17,2025-01-02,Decision by EoQ
+DEAL-2025-0029,KPMG,Technology,APAC,Sarah Chen,Astra Workflow,Proposal Sent,72000,24,50,2025-01-17,Webinar,9,2025-01-04,Decision by EoQ
+DEAL-2025-0030,SAP,Manufacturing,EMEA,Emma Schmidt,Astra Core,Negotiation,240000,36,65,2025-01-20,Content Download,10,2025-01-30,Multi-year deal possible
+DEAL-2025-0031,TCS,Healthcare,LATAM,Sarah Chen,Astra Insights,Contract Review,1200000,12,80,2025-01-16,Content Download,18,2025-01-30,At risk - champion left
+DEAL-2025-0032,Brex,Retail,LATAM,Carlos Mendez,Astra Workflow,Discovery,95000,12,20,2025-01-18,Partner Referral,2,2025-01-21,On track
+DEAL-2025-0033,Bain,Technology,EMEA,Yuki Tanaka,Astra Core,Demo Completed,480000,24,35,2025-01-23,Partner Referral,2,2025-01-24,Decision by EoQ
+DEAL-2025-0034,Asana,Retail,APAC,Sarah Chen,Astra Insights,Demo Completed,480000,12,35,2025-01-26,Content Download,25,2025-01-18,POC in progress
+DEAL-2025-0035,Canva,Media,NAMER,Yuki Tanaka,Astra Enterprise Suite,Discovery,48000,36,20,2025-02-23,Partner Referral,22,2025-01-13,Legal review ongoing
+DEAL-2025-0036,Automation Anywhere,Manufacturing,APAC,Emma Schmidt,Astra Enterprise Suite,Proposal Sent,95000,24,50,2025-01-19,Partner Referral,43,2025-01-07,Multi-year deal possible
+DEAL-2025-0037,Toast,Government,LATAM,James O'Brien,Astra Enterprise Suite,Negotiation,650000,36,65,2025-02-15,Webinar,21,2025-01-03,Legal review ongoing
+DEAL-2025-0038,McKinsey,Retail,APAC,James O'Brien,Astra Analytics,Demo Completed,820000,36,35,2025-01-10,Inbound,22,2025-01-08,At risk - champion left
+DEAL-2025-0039,Stripe,Real Estate,EMEA,Emma Schmidt,Astra Insights,Proposal Sent,48000,24,50,2025-02-17,Outbound SDR,27,2025-01-21,Strong champion
+DEAL-2025-0040,Wipro,Energy,LATAM,Sarah Chen,Astra Enterprise Suite,Closed Won,48000,24,100,2025-01-13,Event,15,2025-01-05,At risk - champion left
+DEAL-2025-0041,Procore,Real Estate,LATAM,David Kim,Astra Analytics,Proposal Sent,480000,36,50,2025-03-25,Event,21,2025-01-09,POC in progress
+DEAL-2025-0042,Stripe,Retail,APAC,David Kim,Astra Core,Contract Review,125000,36,80,2025-03-19,Outbound SDR,32,2025-01-09,Decision by EoQ
+DEAL-2025-0043,Infosys,Retail,LATAM,Priya Patel,Astra Analytics,Discovery,480000,12,20,2025-01-23,Event,9,2025-01-11,On track
+DEAL-2025-0044,Automation Anywhere,Real Estate,NAMER,Emma Schmidt,Astra Insights,Demo Completed,25000,12,35,2025-01-21,Partner Referral,27,2025-01-25,Multi-year deal possible
+DEAL-2025-0045,Figma,Retail,LATAM,James O'Brien,Astra Workflow,Contract Review,240000,36,80,2025-02-25,Inbound,35,2025-01-13,Decision by EoQ
+DEAL-2025-0046,Toast,Manufacturing,NAMER,Emma Schmidt,Astra Enterprise Suite,Proposal Sent,240000,36,50,2025-03-10,Inbound,11,2025-01-21,Multi-year deal possible
+DEAL-2025-0047,Oracle,Education,APAC,James O'Brien,Astra Insights,Prospecting,350000,12,10,2025-02-20,Content Download,4,2025-01-29,Multi-year deal possible
+DEAL-2025-0048,Squarespace,Financial Services,NAMER,Carlos Mendez,Astra Analytics,Discovery,240000,24,20,2025-03-12,Content Download,6,2025-01-31,Strong champion
+DEAL-2025-0049,Canva,Manufacturing,EMEA,Priya Patel,Astra Insights,Negotiation,95000,12,65,2025-03-13,Customer Referral,2,2025-01-31,POC in progress
+DEAL-2025-0050,Figma,Real Estate,NAMER,Priya Patel,Astra Workflow,Demo Completed,125000,24,35,2025-01-28,Inbound,11,2025-01-30,Legal review ongoing
+DEAL-2025-0051,PwC,Real Estate,EMEA,Marcus Williams,Astra Workflow,Proposal Sent,240000,24,50,2025-03-13,Content Download,13,2025-01-19,Strong champion
+DEAL-2025-0052,PwC,Energy,APAC,Sarah Chen,Astra Insights,Discovery,240000,36,20,2025-02-13,Event,24,2025-01-31,Decision by EoQ
+DEAL-2025-0053,Coupa,Manufacturing,APAC,David Kim,Astra Insights,Proposal Sent,350000,36,50,2025-02-28,Partner Referral,10,2025-01-11,POC in progress
+DEAL-2025-0054,SAP,Government,LATAM,Carlos Mendez,Astra Core,Contract Review,48000,24,80,2025-02-20,Outbound SDR,29,2025-01-16,POC in progress
+DEAL-2025-0055,Figma,Technology,NAMER,James O'Brien,Astra Core,Discovery,125000,24,20,2025-01-23,Event,18,2025-01-18,POC in progress
+DEAL-2025-0056,Procore,Financial Services,NAMER,Yuki Tanaka,Astra Analytics,Negotiation,820000,36,65,2025-02-17,Partner Referral,32,2025-01-22,Decision by EoQ
+DEAL-2025-0057,Monday.com,Media,APAC,David Kim,Astra Workflow,Demo Completed,480000,24,35,2025-02-18,Outbound SDR,28,2025-01-04,POC in progress
+DEAL-2025-0058,Wipro,Retail,EMEA,David Kim,Astra Workflow,Discovery,1200000,36,20,2025-03-28,Content Download,45,2025-01-17,Legal review ongoing
+DEAL-2025-0059,UiPath,Manufacturing,APAC,Sarah Chen,Astra Enterprise Suite,Closed Lost,95000,24,0,2025-01-18,Inbound,15,2025-01-02,On track
+DEAL-2025-0060,BCG,Financial Services,APAC,David Kim,Astra Insights,Discovery,72000,36,20,2025-02-20,Outbound SDR,32,2025-01-31,Strong champion
+DEAL-2025-0061,C3.ai,Government,NAMER,Sarah Chen,Astra Analytics,Discovery,350000,12,20,2025-01-28,Partner Referral,5,2025-01-03,POC in progress
+DEAL-2025-0062,Canva,Retail,LATAM,David Kim,Astra Insights,Prospecting,240000,36,10,2025-02-28,Event,39,2025-01-10,Strong champion
+DEAL-2025-0063,Stripe,Retail,APAC,Marcus Williams,Astra Analytics,Proposal Sent,1200000,12,50,2025-01-15,Customer Referral,14,2025-01-03,Evaluating competitors
+DEAL-2025-0064,Squarespace,Technology,NAMER,James O'Brien,Astra Workflow,Prospecting,350000,36,10,2025-03-19,Webinar,39,2025-01-28,At risk - champion left
+DEAL-2025-0065,Notion,Retail,LATAM,Marcus Williams,Astra Enterprise Suite,Prospecting,95000,24,10,2025-01-14,Partner Referral,41,2025-01-27,Evaluating competitors
+DEAL-2025-0066,Asana,Technology,LATAM,Marcus Williams,Astra Insights,Prospecting,72000,24,10,2025-03-19,Webinar,39,2025-01-13,Legal review ongoing
+DEAL-2025-0067,Figma,Financial Services,LATAM,Carlos Mendez,Astra Enterprise Suite,Demo Completed,350000,24,35,2025-02-10,Inbound,6,2025-01-08,Strong champion
+DEAL-2025-0068,KPMG,Manufacturing,LATAM,David Kim,Astra Workflow,Closed Lost,820000,24,0,2025-01-28,Event,37,2025-01-21,At risk - champion left
+DEAL-2025-0069,Databricks,Media,NAMER,Priya Patel,Astra Workflow,Closed Lost,350000,24,0,2025-02-25,Partner Referral,27,2025-01-22,Multi-year deal possible
+DEAL-2025-0070,McKinsey,Media,APAC,Carlos Mendez,Astra Core,Contract Review,480000,12,80,2025-02-26,Content Download,30,2025-01-01,On track
+DEAL-2025-0071,UiPath,Real Estate,LATAM,David Kim,Astra Core,Demo Completed,25000,12,35,2025-01-18,Customer Referral,34,2025-01-05,Legal review ongoing
+DEAL-2025-0072,Deloitte,Real Estate,EMEA,Priya Patel,Astra Workflow,Demo Completed,1200000,24,35,2025-03-10,Customer Referral,8,2025-01-14,No budget confirmed
+DEAL-2025-0073,Plaid,Manufacturing,LATAM,Yuki Tanaka,Astra Enterprise Suite,Discovery,48000,24,20,2025-03-18,Event,8,2025-01-27,At risk - champion left
+DEAL-2025-0074,Infosys,Education,EMEA,Priya Patel,Astra Core,Closed Lost,95000,24,0,2025-02-23,Partner Referral,36,2025-01-30,On track
+DEAL-2025-0075,Notion,Real Estate,LATAM,Priya Patel,Astra Insights,Discovery,25000,24,20,2025-03-25,Partner Referral,20,2025-01-11,On track
+DEAL-2025-0076,HCL,Retail,LATAM,James O'Brien,Astra Insights,Negotiation,240000,24,65,2025-01-20,Webinar,21,2025-01-16,Multi-year deal possible
+DEAL-2025-0077,Hubspot,Financial Services,EMEA,Carlos Mendez,Astra Core,Demo Completed,820000,36,35,2025-02-13,Customer Referral,10,2025-01-30,At risk - champion left
+DEAL-2025-0078,Infosys,Healthcare,LATAM,Yuki Tanaka,Astra Workflow,Prospecting,72000,24,10,2025-03-22,Webinar,42,2025-01-03,Decision by EoQ
+DEAL-2025-0079,Stripe,Government,NAMER,Marcus Williams,Astra Analytics,Contract Review,480000,24,80,2025-03-19,Outbound SDR,21,2025-01-24,No budget confirmed
+DEAL-2025-0080,Procore,Manufacturing,APAC,Sarah Chen,Astra Core,Demo Completed,48000,36,35,2025-02-11,Partner Referral,7,2025-01-12,Decision by EoQ
+DEAL-2025-0081,Asana,Manufacturing,EMEA,Priya Patel,Astra Core,Demo Completed,95000,36,35,2025-03-22,Customer Referral,27,2025-01-22,POC in progress
+DEAL-2025-0082,Toast,Technology,LATAM,Yuki Tanaka,Astra Core,Demo Completed,650000,12,35,2025-02-19,Webinar,15,2025-01-18,Evaluating competitors
+DEAL-2025-0083,Stripe,Education,APAC,David Kim,Astra Workflow,Prospecting,180000,36,10,2025-01-22,Content Download,20,2025-01-16,No budget confirmed
+DEAL-2025-0084,ServiceNow,Technology,NAMER,Emma Schmidt,Astra Workflow,Discovery,650000,24,20,2025-01-28,Content Download,37,2025-01-22,Strong champion
+DEAL-2025-0085,IBM,Real Estate,APAC,James O'Brien,Astra Analytics,Closed Won,1200000,24,100,2025-03-18,Webinar,19,2025-01-25,Evaluating competitors
+DEAL-2025-0086,Workday,Government,NAMER,Carlos Mendez,Astra Analytics,Proposal Sent,820000,36,50,2025-01-19,Partner Referral,3,2025-01-24,Multi-year deal possible
+DEAL-2025-0087,Freshworks,Energy,APAC,Priya Patel,Astra Workflow,Prospecting,72000,36,10,2025-02-19,Webinar,24,2025-01-28,Decision by EoQ
+DEAL-2025-0088,IBM,Education,APAC,Marcus Williams,Astra Insights,Contract Review,350000,12,80,2025-01-18,Customer Referral,10,2025-01-04,At risk - champion left
+DEAL-2025-0089,Notion,Education,APAC,Marcus Williams,Astra Analytics,Discovery,1200000,36,20,2025-02-10,Customer Referral,17,2025-01-29,On track
+DEAL-2025-0090,PwC,Government,APAC,Emma Schmidt,Astra Core,Discovery,650000,12,20,2025-01-11,Inbound,42,2025-01-10,At risk - champion left
+DEAL-2025-0091,Automation Anywhere,Government,APAC,Emma Schmidt,Astra Enterprise Suite,Prospecting,95000,36,10,2025-03-14,Event,9,2025-01-21,No budget confirmed
+DEAL-2025-0092,KPMG,Media,EMEA,David Kim,Astra Insights,Contract Review,650000,24,80,2025-01-21,Inbound,18,2025-01-22,Decision by EoQ
+DEAL-2025-0093,C3.ai,Technology,EMEA,Marcus Williams,Astra Insights,Proposal Sent,820000,24,50,2025-01-16,Webinar,4,2025-01-21,Strong champion
+DEAL-2025-0094,Asana,Retail,NAMER,James O'Brien,Astra Enterprise Suite,Prospecting,180000,12,10,2025-01-17,Partner Referral,9,2025-01-25,Evaluating competitors
+DEAL-2025-0095,Infosys,Manufacturing,APAC,Priya Patel,Astra Core,Negotiation,650000,12,65,2025-03-10,Outbound SDR,18,2025-01-01,Decision by EoQ
+DEAL-2025-0096,Deloitte,Manufacturing,APAC,Sarah Chen,Astra Analytics,Negotiation,95000,36,65,2025-03-23,Customer Referral,21,2025-01-04,No budget confirmed
+DEAL-2025-0097,BCG,Government,EMEA,Sarah Chen,Astra Enterprise Suite,Demo Completed,180000,36,35,2025-02-24,Webinar,38,2025-01-31,Strong champion
+DEAL-2025-0098,Rippling,Healthcare,LATAM,David Kim,Astra Core,Prospecting,350000,24,10,2025-01-20,Customer Referral,28,2025-01-05,No budget confirmed
+DEAL-2025-0099,Monday.com,Media,LATAM,Yuki Tanaka,Astra Insights,Prospecting,650000,36,10,2025-03-23,Inbound,38,2025-01-26,No budget confirmed
+DEAL-2025-0100,Coupa,Government,EMEA,Emma Schmidt,Astra Workflow,Contract Review,820000,36,80,2025-02-22,Event,14,2025-01-24,No budget confirmed
