@@ -1,0 +1,35 @@
+<svg width="200" height="200" viewBox="0 0 200 200" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>Astra AI Copilot Icon</title>
+  <desc>Black and white icon mark for Astra AI Copilot — a 4-pointed star with orbit rings</desc>
+
+  <style>
+    @media (prefers-color-scheme: dark) {
+      .mark-fill { fill: #ffffff; }
+      .mark-stroke { stroke: #ffffff; }
+      .bg-outer { fill: #111111; }
+    }
+    @media (prefers-color-scheme: light) {
+      .mark-fill { fill: #111111; }
+      .mark-stroke { stroke: #111111; }
+      .bg-outer { fill: #f5f5f5; }
+    }
+  </style>
+
+  <rect x="0" y="0" width="200" height="200" rx="36" class="bg-outer"/>
+
+  <!-- Outer orbit ring -->
+  <ellipse cx="100" cy="100" rx="72" ry="72" fill="none" class="mark-stroke" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <!-- Tilted inner orbit ring -->
+  <ellipse cx="100" cy="100" rx="72" ry="23" fill="none" class="mark-stroke" stroke-width="1" transform="rotate(-30, 100, 100)"/>
+
+  <!-- 4-pointed star -->
+  <path d="M100 60 C101.5 78 112 89 100 90 C88 89 98.5 78 100 60Z" class="mark-fill"/>
+  <path d="M100 140 C101.5 122 112 111 100 110 C88 111 98.5 122 100 140Z" class="mark-fill"/>
+  <path d="M60 100 C78 101.5 89 112 90 100 C89 88 78 99.5 60 100Z" class="mark-fill"/>
+  <path d="M140 100 C122 101.5 111 112 110 100 C111 88 122 99.5 140 100Z" class="mark-fill"/>
+
+  <!-- Orbital dots -->
+  <circle cx="166" cy="78" r="5" class="mark-fill"/>
+  <circle cx="34" cy="122" r="3.5" class="mark-fill"/>
+
+</svg>
