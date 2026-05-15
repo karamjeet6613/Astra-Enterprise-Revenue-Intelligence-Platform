@@ -51,18 +51,137 @@ if page == "🏠 Home":
     with col3:
         st.warning("**📊 Sales Copilot**\n\nRevenue analytics and pipeline intelligence")
 
-elif page == "🤖 AI Copilot":
-    st.markdown("## 🤖 AI Copilot")
-    st.caption("General purpose enterprise assistant")
-    if "copilot_messages" not in st.session_state:
-        st.session_state.copilot_messages = []
-    for msg in st.session_state.copilot_messages:
+elif page == "📊 Sales Copilot":
+    st.markdown("## 📊 Sales Copilot")
+    st.caption("Revenue analytics and pipeline intelligence — powered by Astra AI")
+    st.divider()
+
+    import pandas as pd
+    import plotly.express as px
+
+    DATA_DIR = os.path.join(os.path.dirname(__file__), "data", "sales_docs")
+
+    @st.cache_data
+    def load_data():
+        revenue_df = pd.read_csv(os.path.join(DATA_DIR, "revenue_by_region_2024.csv"))
+        pipeline_df = pd.read_csv(os.path.join(DATA_DIR, "pipeline_deals_Q1_2025.csv"))
+        reps_df = pd.read_csv(os.path.join(DATA_DIR, "sales_rep_performance_2024.csv"))
+        return revenue_df, pipeline_df, reps_df
+
+    revenue_df, pipeline_df, reps_df = load_data()
+
+    # ── KPI Row ──────────────────────────────────
+    total_rev = revenue_df["Revenue_USD"].sum()
+    total_target = revenue_df["Target_USD"].sum()
+    attainment = round(total_rev / total_target * 100, 1)
+    total_pipeline = pipeline_df["ARR_USD"].sum()
+    avg_deal = pipeline_df["ARR_USD"].mean()
+
+    k1, k2, k3, k4 = st.columns(4)
+    k1.metric("Total Revenue FY2024", f"${total_rev/1e6:.1f}M", f"{attainment}% of target")
+    k2.metric("Total Target", f"${total_target/1e6:.1f}M")
+    k3.metric("Q1 2025 Pipeline", f"${total_pipeline/1e6:.1f}M")
+    k4.metric("Avg Deal Size", f"${avg_deal/1e3:.0f}K")
+
+    st.divider()
+
+    # ── Charts Row ───────────────────────────────
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.markdown("**Revenue vs Target by Region**")
+        region_data = revenue_df.groupby("Region").agg(
+            Revenue=("Revenue_USD", "sum"),
+            Target=("Target_USD", "sum")
+        ).reset_index()
+        fig1 = px.bar(region_data, x="Region",
+                      y=["Revenue", "Target"],
+                      barmode="group",
+                      color_discrete_map={"Revenue": "#0f3460", "Target": "#e94560"},
+                      height=320)
+        fig1.update_layout(margin=dict(t=20, b=20), legend_title="")
+        st.plotly_chart(fig1, use_container_width=True)
+
+    with col2:
+        st.markdown("**Quarterly Revenue Trend**")
+        q_data = revenue_df.groupby("Quarter")["Revenue_USD"].sum().reset_index()
+        fig2 = px.line(q_data, x="Quarter", y="Revenue_USD",
+                       markers=True, height=320,
+                       color_discrete_sequence=["#0f3460"])
+        fig2.update_layout(margin=dict(t=20, b=20))
+        st.plotly_chart(fig2, use_container_width=True)
+
+    col3, col4 = st.columns(2)
+
+    with col3:
+        st.markdown("**Pipeline by Stage (Q1 2025)**")
+        stage_data = pipeline_df.groupby("Stage")["ARR_USD"].sum().reset_index()
+        fig3 = px.pie(stage_data, values="ARR_USD", names="Stage",
+                      height=320,
+                      color_discrete_sequence=px.colors.sequential.Blues_r)
+        fig3.update_layout(margin=dict(t=20, b=20))
+        st.plotly_chart(fig3, use_container_width=True)
+
+    with col4:
+        st.markdown("**Sales Rep Leaderboard**")
+        top_reps = reps_df.nlargest(8, "Quota_Attainment_Pct")[
+            ["Rep_Name", "Region", "Quota_Attainment_Pct", "Annual_Attain_USD"]
+        ].copy()
+        top_reps["Annual_Attain_USD"] = top_reps["Annual_Attain_USD"].apply(
+            lambda x: f"${x/1e6:.2f}M"
+        )
+        top_reps.columns = ["Rep", "Region", "Attainment %", "Revenue"]
+        st.dataframe(top_reps, use_container_width=True, hide_index=True, height=320)
+
+    st.divider()
+
+    # ── AI Q&A ───────────────────────────────────
+    st.markdown("**💬 Ask Astra Sales Copilot**")
+    st.caption("Ask revenue questions and get AI-powered insights")
+
+    sample_qs = [
+        "Why did APAC revenue drop?",
+        "Who are the top performers?",
+        "What is our pipeline health?",
+        "Which region is overperforming?",
+        "What deals are at risk?",
+        "Suggest actions to improve LATAM",
+    ]
+    cols = st.columns(3)
+    for i, q in enumerate(sample_qs):
+        with cols[i % 3]:
+            if st.button(q, key=f"sales_q_{i}", use_container_width=True):
+                st.session_state.sales_question = q
+
+    if "sales_messages" not in st.session_state:
+        st.session_state.sales_messages = []
+    if "sales_question" not in st.session_state:
+        st.session_state.sales_question = ""
+
+    for msg in st.session_state.sales_messages:
         with st.chat_message(msg["role"]):
             st.write(msg["content"])
-    if prompt := st.chat_input("Ask anything..."):
-        st.session_state.copilot_messages.append({"role": "user", "content": prompt})
+
+    question = st.chat_input("Ask a sales question...") or st.session_state.sales_question
+    if st.session_state.sales_question:
+        st.session_state.sales_question = ""
+
+    if question:
+        st.session_state.sales_messages.append({"role": "user", "content": question})
+        with st.chat_message("user"):
+            st.write(question)
         with st.chat_message("assistant"):
-            st.write("AI Copilot coming in Demo 2 build — stay tuned!")
+            with st.spinner("Analyzing sales data..."):
+                try:
+                    from agents.sales_copilot import ask_sales
+                    result = ask_sales(question)
+                    st.write(result["answer"])
+                    st.session_state.sales_messages.append({
+                        "role": "assistant",
+                        "content": result["answer"]
+                    })
+                except Exception as e:
+                    st.error(f"Error: {e}")
 
 elif page == "❓ AskHR":
     st.markdown("## ❓ AskHR")
