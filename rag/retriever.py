@@ -5,7 +5,10 @@ Converts user query → embedding → similarity search → returns relevant chu
 
 import os
 from dotenv import load_dotenv
-from google import genai
+try:
+    from google import genai
+except ImportError:
+    import google.generativeai as genai
 from supabase import create_client
 
 load_dotenv()
