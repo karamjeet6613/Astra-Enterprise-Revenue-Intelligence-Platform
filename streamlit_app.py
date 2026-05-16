@@ -3,17 +3,15 @@ import base64
 import sys
 import os
 from dotenv import load_dotenv
-import streamlit as st
 
 load_dotenv()
 
 # Load from Streamlit secrets if available (production)
-import os
 for key in ["GEMINI_API_KEY", "GROQ_API_KEY", "SUPABASE_URL", "SUPABASE_ANON_KEY", "SUPABASE_SERVICE_KEY"]:
     if key in st.secrets:
         os.environ[key] = st.secrets[key]
-sys.path.insert(0, os.path.dirname(__file__))
 
+sys.path.insert(0, os.path.dirname(__file__))
 # ── Page config ────────────────────────────────
 st.set_page_config(
     page_title="Astra — Enterprise Revenue Intelligence",
@@ -36,7 +34,7 @@ with st.sidebar:
     st.caption("Enterprise Revenue Intelligence Platform")
     st.divider()
     st.markdown("**Navigation**")
-    page = st.radio("", [
+    page = st.radio("Navigation", [
         "🏠 Home",
         "🤖 AI Copilot",
         "❓ AskHR",
@@ -116,7 +114,7 @@ elif page == "❓ AskHR":
     ]
     for i, q in enumerate(sample_questions):
         with cols[i % 3]:
-            if st.button(q, key=f"sq_{i}", use_container_width=True):
+            if st.button(q, key=f"sq_{i}", width='stretch'):
                 st.session_state.hr_question = q
 
     st.divider()
@@ -210,7 +208,7 @@ elif page == "📊 Sales Copilot":
         fig1.update_layout(margin=dict(t=10, b=10, l=10, r=10),
                            legend_title="", legend=dict(orientation="h", y=-0.3),
                            font=dict(size=10))
-        st.plotly_chart(fig1, use_container_width=True)
+        st.plotly_chart(fig1, width='stretch')
 
     with c2:
         st.markdown("**Quarterly Revenue Trend**")
@@ -220,7 +218,7 @@ elif page == "📊 Sales Copilot":
                        color_discrete_sequence=["#0f3460"])
         fig2.update_layout(margin=dict(t=10, b=10, l=10, r=10),
                            font=dict(size=10))
-        st.plotly_chart(fig2, use_container_width=True)
+        st.plotly_chart(fig2, width='stretch')
 
     with c3:
         st.markdown("**Pipeline by Stage**")
@@ -231,7 +229,7 @@ elif page == "📊 Sales Copilot":
         fig3.update_layout(margin=dict(t=10, b=10, l=10, r=10),
                            font=dict(size=9),
                            showlegend=False)
-        st.plotly_chart(fig3, use_container_width=True)
+        st.plotly_chart(fig3, width='stretch')
 
     # ── Leaderboard + Region Attainment ──────────
     l1, l2 = st.columns(2)
@@ -245,7 +243,7 @@ elif page == "📊 Sales Copilot":
             lambda x: f"${x/1e6:.2f}M"
         )
         top_reps.columns = ["Rep", "Region", "Attain %", "Revenue"]
-        st.dataframe(top_reps, use_container_width=True, hide_index=True, height=185)
+        st.dataframe(top_reps, width='stretch', hide_index=True, height=185)
 
     with l2:
         st.markdown("**🌍 Attainment by Region**")
@@ -263,7 +261,7 @@ elif page == "📊 Sales Copilot":
         fig4.update_layout(margin=dict(t=10, b=10, l=10, r=30),
                            font=dict(size=10),
                            coloraxis_showscale=False)
-        st.plotly_chart(fig4, use_container_width=True)
+        st.plotly_chart(fig4, width='stretch')
 
     # ── AI Chat in expander ───────────────────────
     with st.expander("💬 Ask Astra Sales Copilot", expanded=False):
@@ -278,7 +276,7 @@ elif page == "📊 Sales Copilot":
         cols = st.columns(3)
         for i, q in enumerate(sample_qs):
             with cols[i % 3]:
-                if st.button(q, key=f"sales_q_{i}", use_container_width=True):
+                if st.button(q, key=f"sales_q_{i}", width='stretch'):
                     st.session_state.sales_question = q
 
         if "sales_messages" not in st.session_state:
