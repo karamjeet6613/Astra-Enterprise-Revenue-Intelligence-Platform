@@ -8,8 +8,19 @@ load_dotenv()
 
 # Load from Streamlit secrets if available (production)
 for key in ["GEMINI_API_KEY", "GROQ_API_KEY", "SUPABASE_URL", "SUPABASE_ANON_KEY", "SUPABASE_SERVICE_KEY"]:
-    if key in st.secrets:
-        os.environ[key] = st.secrets[key]
+    try:
+        if key in st.secrets:
+            os.environ[key] = st.secrets[key]
+    except Exception:
+        pass
+
+# Debug — remove after fixing
+import streamlit as st
+with st.sidebar:
+    groq_key = os.getenv("GROQ_API_KEY")
+    supabase_url = os.getenv("SUPABASE_URL")
+    st.caption(f"GROQ: {'✅' if groq_key else '❌'}")
+    st.caption(f"SUPABASE: {'✅' if supabase_url else '❌'}")
 
 sys.path.insert(0, os.path.dirname(__file__))
 # ── Page config ────────────────────────────────
