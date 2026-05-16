@@ -6,7 +6,11 @@ from rag.retriever import retrieve, format_context
 
 load_dotenv()
 
-groq_client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+import httpx
+groq_client = Groq(
+    api_key=os.getenv("GROQ_API_KEY"),
+    http_client=httpx.Client()
+)
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "sales_docs")
 

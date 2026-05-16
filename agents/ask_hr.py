@@ -10,7 +10,11 @@ from rag.retriever import retrieve, format_context
 
 load_dotenv()
 
-groq_client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+import httpx
+groq_client = Groq(
+    api_key=os.getenv("GROQ_API_KEY"),
+    http_client=httpx.Client()
+)
 
 SYSTEM_PROMPT = """You are AskHR, an intelligent HR assistant for NexaCore Technologies.
 You answer employee questions accurately based ONLY on the company HR policies provided.
