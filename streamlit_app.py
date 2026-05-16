@@ -89,7 +89,11 @@ elif page == "🤖 AI Copilot":
             with st.spinner("Thinking..."):
                 try:
                     from groq import Groq
-                    groq_client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+                    import httpx
+                    groq_client = Groq(
+                        api_key=os.getenv("GROQ_API_KEY"),
+                        http_client=httpx.Client()
+                    )
                     response = groq_client.chat.completions.create(
                         model="llama-3.3-70b-versatile",
                         messages=[
@@ -106,7 +110,9 @@ elif page == "🤖 AI Copilot":
                         "content": answer
                     })
                 except Exception as e:
+                    import traceback
                     st.error(f"Error: {e}")
+                    st.code(traceback.format_exc())
 
 elif page == "❓ AskHR":
     st.markdown("## ❓ AskHR")
@@ -167,7 +173,9 @@ elif page == "❓ AskHR":
                         "sources": result["sources"]
                     })
                 except Exception as e:
+                    import traceback
                     st.error(f"Error: {e}")
+                    st.code(traceback.format_exc())
 
 elif page == "📊 Sales Copilot":
     st.markdown("## 📊 Sales Copilot")
@@ -318,4 +326,6 @@ elif page == "📊 Sales Copilot":
                             "content": result["answer"]
                         })
                     except Exception as e:
+                        import traceback
                         st.error(f"Error: {e}")
+                        st.code(traceback.format_exc())
