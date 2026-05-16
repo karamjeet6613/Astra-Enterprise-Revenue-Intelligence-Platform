@@ -3,8 +3,15 @@ import base64
 import sys
 import os
 from dotenv import load_dotenv
+import streamlit as st
 
 load_dotenv()
+
+# Load from Streamlit secrets if available (production)
+import os
+for key in ["GEMINI_API_KEY", "GROQ_API_KEY", "SUPABASE_URL", "SUPABASE_ANON_KEY", "SUPABASE_SERVICE_KEY"]:
+    if key in st.secrets:
+        os.environ[key] = st.secrets[key]
 sys.path.insert(0, os.path.dirname(__file__))
 
 # ── Page config ────────────────────────────────
