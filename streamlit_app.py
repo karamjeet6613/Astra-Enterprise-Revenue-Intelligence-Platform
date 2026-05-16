@@ -14,13 +14,6 @@ for key in ["GEMINI_API_KEY", "GROQ_API_KEY", "SUPABASE_URL", "SUPABASE_ANON_KEY
     except Exception:
         pass
 
-# Debug — remove after fixing
-import streamlit as st
-with st.sidebar:
-    groq_key = os.getenv("GROQ_API_KEY")
-    supabase_url = os.getenv("SUPABASE_URL")
-    st.caption(f"GROQ: {'✅' if groq_key else '❌'}")
-    st.caption(f"SUPABASE: {'✅' if supabase_url else '❌'}")
 
 sys.path.insert(0, os.path.dirname(__file__))
 # ── Page config ────────────────────────────────
@@ -110,9 +103,7 @@ elif page == "🤖 AI Copilot":
                         "content": answer
                     })
                 except Exception as e:
-                    import traceback
                     st.error(f"Error: {e}")
-                    st.code(traceback.format_exc())
 
 elif page == "❓ AskHR":
     st.markdown("## ❓ AskHR")
@@ -173,9 +164,7 @@ elif page == "❓ AskHR":
                         "sources": result["sources"]
                     })
                 except Exception as e:
-                    import traceback
                     st.error(f"Error: {e}")
-                    st.code(traceback.format_exc())
 
 elif page == "📊 Sales Copilot":
     st.markdown("## 📊 Sales Copilot")
@@ -326,6 +315,4 @@ elif page == "📊 Sales Copilot":
                             "content": result["answer"]
                         })
                     except Exception as e:
-                        import traceback
                         st.error(f"Error: {e}")
-                        st.code(traceback.format_exc())
