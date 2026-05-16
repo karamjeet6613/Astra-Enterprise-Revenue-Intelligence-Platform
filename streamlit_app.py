@@ -10,7 +10,7 @@ load_dotenv()
 for key in ["GEMINI_API_KEY", "GROQ_API_KEY", "SUPABASE_URL", "SUPABASE_ANON_KEY", "SUPABASE_SERVICE_KEY"]:
     try:
         if key in st.secrets:
-            os.environ[key] = st.secrets[key]
+            os.environ[key] = str(st.secrets[key]).strip()
     except Exception:
         pass
 
